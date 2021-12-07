@@ -46,6 +46,53 @@ body {
   border-radius: 20px 20px 20px 20px;
 }
 
+/* card description */
+.card-description {
+  color: var(--primary-1);
+}
+
+/* coin info */
+.coin-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.price {
+  display: flex;
+  flex-direction: row;
+}
+
+.price p {
+  color: var(--primary-2);
+}
+
+.time {
+  display: flex;
+  flex-direction: row;
+}
+
+.time p {
+  color: var(--primary-1);
+}
+
+/* creator */
+.creator {
+  display: flex;
+  flex-direction: row;
+  border-top: 2px solid var(--line);
+  align-items: center;
+}
+
+.creator img {
+  max-width: 40px;
+  max-height: 40px;
+}
+
+.creator span {
+  color: var(--primary-1);
+}
+
 /* Attribution */
 .attribution {
   font-size: 11px;
