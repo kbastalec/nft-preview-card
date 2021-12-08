@@ -30,7 +30,7 @@ body {
   color: var(--white);
 }
 
-/* card */
+/* <<<card>>> */
 .card {
   max-width: 325px;
   margin: 30px auto;
@@ -39,11 +39,62 @@ body {
   padding: 20px;
 }
 
-/* card image */
-.card-image img {
+/* ///card image/// */
+.image {
+  position: relative;
+  max-height: 100%;
+}
+
+.card-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.overlay {
+  position: absolute;
   width: 100%;
   height: 100%;
-  border-radius: 20px 20px 20px 20px;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  border-radius: 10px;
+  background-color: var(--primary-2);
+  transition: all 0.2s linear;
+}
+
+.image:hover .overlay {
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+.overlay-img {
+  margin-top: -24px;
+  margin-left: -24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+
+.image:hover .overlay-img {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* ///card-info/// */
+/* card title */
+.card-title {
+  margin: 15px 0;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.card-title h3:hover {
+  color: var(--primary-2);
+  cursor: pointer;
 }
 
 /* card description */
@@ -51,10 +102,11 @@ body {
   color: var(--primary-1);
 }
 
-/* coin info */
+/* price info */
 .coin-info {
   display: flex;
   flex-direction: row;
+  margin: 15px 0;
   justify-content: space-between;
 }
 
@@ -63,8 +115,13 @@ body {
   flex-direction: row;
 }
 
+.price img {
+  margin-right: 7px;
+}
+
 .price p {
   color: var(--primary-2);
+  font-weight: 600;
 }
 
 .time {
@@ -72,32 +129,45 @@ body {
   flex-direction: row;
 }
 
+.time img {
+  margin-right: 7px;
+}
+
 .time p {
   color: var(--primary-1);
 }
 
-/* creator */
+/* ///creator/// */
 .creator {
   display: flex;
   flex-direction: row;
   border-top: 2px solid var(--line);
   align-items: center;
+  padding: 20px 0 15px;
 }
 
 .creator img {
   max-width: 40px;
   max-height: 40px;
+  margin-right: 20px;
+  border: 1.8px solid var(--white);
+  border-radius: 50%;
+}
+
+.creator p:hover {
+  color: var(--primary-2);
+  cursor: pointer;
 }
 
 .creator span {
   color: var(--primary-1);
 }
 
-/* Attribution */
+/* //Attribution// */
 .attribution {
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: hsl(228, 38%, 82%);
 }
